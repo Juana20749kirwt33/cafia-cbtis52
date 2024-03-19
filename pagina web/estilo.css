@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+:root{ /*COLORES DE LA PAGINA*/
+    --azul: #77C9E6;
+    --celeste: #E4EDFC;
+    --cielo: #4CB5FE;
+    --degradado: linear-gradient(90deg, var(--celeste), var(--azul));
+}
+*{
+    font-family: 'Poppins', sans-serif; /*TIPO DE LETRA Y DISEÑO DEL ORDEN*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*ORDEN DE LOS ELEMENTOS*/
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+*::selection{ 
+    background: var(--celeste); /*COLOR DE FONDO*/
+    color: white;
+}
+html{
+    font-size: 62.4%; /*TAMAÑO DE FUENTE*/
+    overflow: hidden;
+}
+body{
+    background: url(https://static.vecteezy.com/system/resources/previews/011/014/575/original/hand-drawing-coffee-element-seamless-pattern-background-free-vector.jpg); /*COLOR DE FONDO*/
+}
+section{ /*ACOMODAMIENTO DEL LOGO*/
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+}
+.inicio .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border-radius: 5rem;
+    background: #69d0f0;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /*COLOR DE LA BARRA*/
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1); /*SOMBRA*/
+    padding: 2rem 9%;
+    display: flex; /*AGUAAAAAAAAAAS AQUI PORQUE ESTE ES PARA QUITAR LA BARRA SI TINE NONE PERO SE MUESTRA EL H3, P Y EL BOTON ASI QUE ESTA POR ABAJOI DE LA BARRA PTM*/
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    height: 100px;
+    margin-top: -20px;
+}
+section.inicio{
+    margin-top: 100px;
+}
+header .logo{ /*COLOR DE LOGO*/
+    font-size: 3rem;
+    color: var(--azul);
+}
+header .navbar a{ /*DETALLES DE ETIQUETA*/
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    color: var(--cielo);
+}
+header .navbar a:hover{ /*COLOR DE SELECCION*/
+    color: var(--celeste);
+}
+header input{
+    display: none;
+}
+header label{
+    font-size: 3rem;
+    color: var(--azul);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+.inicio {
+    /* ACOMODAMIENTO DE IMAGEN DE FONDO */
+    display: flex;/*AGUAS*/
+    align-items: center; /*AGUAS*/
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+.content{ /*PARA PONER LA IMAGEN A LADO DEL TEXTO*/
+    float: right;
+    margin-left: 20px;
+}
+.inicio .image img{ /* TAMAÑO DEL LOGO Y PARA LA ANIMACION*/
+    width: 30vw;
+    animation: float 3s linear infinite;
+} 
+@keyframes float{ /*ANIMACION*/
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}
+.inicio .content h3{ /*TAMAÑO DE LA LETRA*/
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+.inicio .content p{
+    font-size: 3rem;
+    color: white;
+    padding: 1rem 0;
+}
+.opiniones .form{
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    border-radius: 20px;
+    text-align: center;
+    width: 340px;
+}
+.opiniones .input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.opiniones .h2{
+    color: #283629;
+    font-size: 5rem;
+}
+.opiniones .label{
+    color: #283629;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.opiniones input, textarea{
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #cfeef8;
+    border: 2px solid var(--cielo);
+    color: #283629;
+    outline: none;
+}
+.opiniones input::placeholder, textarea::placeholder{
+    color: #b5cab6;
+}
+.opiniones .btn{
+    font-size: 16px;
+    color: #ffffff;
+    border: 0;
+    border-radius: 25px;
+    background-color: var(--azul);
+    box-shadow: 0 0 20px rgb(114, 120, 229);
+    cursor: pointer;
+}
+.opiniones .btn:hover{
+    background-color: rgb(104, 187, 250);
+}
+.acerca-de{
+    font-size: 2rem;
+    color: #000000;
+}
+.acerca-de .image{
+    text-align: right;
+}
+.acerca-de .image img{
+    width: 7vw;
+}
+.menu div{
+    border-style: solid;
+    border-width: 2px;
+    margin: 7px;
+    padding: 7px;
+    background-color: var(--celeste);
+    font-size: 1rem
+}
+.menu h3{
+    font-size: 4rem;
+}
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width:768px){
+    header label{
+        visibility: visible;
+        opacity: 1;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+        transition: .2s linear;
+    }
+    header .navbar a{
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
+    header input:checked~.navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    header input:checked~label::before{
+        content: '\f00';
+    }
+    .inicio{
+        flex-flow: column-reverse;
+    }
+}
+@media(max-width:450px){
+    html{
+        font-size: 49%;
+    }
+}
